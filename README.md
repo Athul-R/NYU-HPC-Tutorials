@@ -92,7 +92,7 @@ To copy data, you must first start an interactive job on the burst node (eg: via
 You can launch a terminal session from the Jupyter Notebook environment by -> Launch -> Jupyter Notebook -> File -> New -> Terminal.
 
 <video style="width: 100%; height: auto;" controls playsinline preload="metadata">
-  <source src="./Launch%20Jupyter.mov" type="video/mp4">
+  <source src="./Launch%20Jupyter.mov" type="video/quicktime">
   Your browser does not support the video. Reload in Chrome
 </video>
 
