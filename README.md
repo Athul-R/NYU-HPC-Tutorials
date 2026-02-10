@@ -120,7 +120,7 @@ Since we would be using Deep Learning libraries like huggingface, pytorch, etc. 
 
 WE HIGHLY RECOMMEND YOU TO USE THE SINGULARITY IMAGE FROM THE HPC TUTORIAL DIRECTORY. 
 
-> :warning: When you copy the singularity image def. file, make sure you copy the file with the right cuda version. Pytorch will throw an error if your pytorch version is not compatible with the cuda version in the singularity image. You can 
+> :warning: When you copy the singularity image def. file, make sure you copy the file with the right cuda version. Pytorch will throw an error if your pytorch version is not compatible with the cuda version in the singularity image. 
 
 - The singularity image defition files can be found at `/share/apps/images/`. ![Singularity Image Def. Files](./Singularity%20Files.png)
 - The overlay files can be found at `/scratch/work/public/overlay-fs-ext3/`. ![Overlay Files](./Overlay%20Files.png). Each overlay file has a different size and has a certain file limit. We will be using the 25GB overlay file which has a file limit of 500,000 files. This will be sufficient for all our assignments.
@@ -214,7 +214,7 @@ True
 Now exit your container.
 
 ## Submitting a SLURM Job. 
-The jobs to run your code is submitted using SBATCH. Create a SBATCH file in your burst node OUTSIDE YOUR SINGULARITY container. 
+The jobs in HPC are managed using SLURM. Slurm (Simple Linux Utility for Resource Management) is an open-source, high-performance workload manager and job scheduler designed for Linux clusters. The jobs to run your code is submitted using SBATCH. Create a SBATCH file in your burst node OUTSIDE YOUR SINGULARITY container. 
 
 Download a sample test file. 
 
