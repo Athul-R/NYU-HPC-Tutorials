@@ -201,7 +201,7 @@ Before you install pytorch, you need to set the TMPDIR environment variable to a
 
 ```bash
 (nlp_env) Singularity> pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
-
+```
 
 Now test your pytorch installation.
 
@@ -215,7 +215,7 @@ Now exit your container.
 
 ## Submitting a SLURM Job. 
 The jobs to run your code is submitted using SBATCH. Create a SBATCH file in your burst node OUTSIDE YOUR SINGULARITY container. 
-```
+
 Download a sample test file. 
 
 ```bash
