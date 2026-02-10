@@ -118,7 +118,7 @@ Singularity image definition files are read-only by default. But you need write 
 
 Since we would be using Deep Learning libraries like huggingface, pytorch, etc. We would use singularity images with pre-installed CUDA kernels. 
 
-WE HIGHLY RECOMMEND YOU TO USE THE SINGULARITY IMAGE FROM THE HPC TUTORIAL REPOSITORY. 
+WE HIGHLY RECOMMEND YOU TO USE THE SINGULARITY IMAGE FROM THE HPC TUTORIAL DIRECTORY. 
 
 > :warning: When you copy the singularity image def. file, make sure you copy the file with the right cuda version. Pytorch will throw an error if your pytorch version is not compatible with the cuda version in the singularity image. You can 
 
