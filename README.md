@@ -132,7 +132,7 @@ We will be using the following configuration for our tutorial here:
 - Pytorch: 2.6.0
 - CUDA: 12.6.3 
 
-You can use any other compatible versions as well. Refer to the [Pytorch official documentation](https://pytorch.org/get-started/previous-versions/) for finding the compatible versions.
+You can use any other compatible versions as well. Refer to the [Pytorch official documentation](https://pytorch.org/get-started/previous-versions/) to find out the compatible versions.
 
 
 
@@ -197,7 +197,7 @@ Singularity> conda create -n nlp_env python==3.11
 Singularity> conda activate nlp_env
 ```
 
-Before you install pytorch, you need to set the TMPDIR environment variable to a directory in your scratch space. This is because the default temporary directory is too small and may cause the installation to fail. 
+Before you install pytorch, you may need to set the TMPDIR environment variable to a directory in your scratch space. This is because the default temporary directory is too small and may cause the installation to fail. 
 
 ```bash
 (nlp_env) Singularity> pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
@@ -216,10 +216,11 @@ Now exit your container.
 ## Submitting a SLURM Job. 
 The jobs in HPC are managed using SLURM. Slurm (Simple Linux Utility for Resource Management) is an open-source, high-performance workload manager and job scheduler designed for Linux clusters. The jobs to run your code is submitted using SBATCH. Create a SBATCH file in your burst node OUTSIDE YOUR SINGULARITY container. 
 
-Download a sample test file. 
+Download a sample test file inside your SCRATCH directory.
 
 ```bash
-[ar6316@b-19-50 ~]$ wget https://nyu-cs2590.github.io/course-material/fall2023/section/sec03/test_gpu.py
+[ar6316@b-19-50 ~]$ cd /scratch/$USER
+[ar6316@b-19-50 ~]$ wget https://nyu-cs2590.github.io/course-material/fall2023/section/sec03/test_gpu.py 
 ```
 
 Create a SBATCH file.
@@ -244,7 +245,7 @@ And then paste the following lines in the `gpu_test.sbatch` file. You can read m
 #SBATCH --requeue # Requeue the job if it fails.
 
 
-singularity exec --bind /scratch --nv --overlay  /scratch/$USER/overlay-25GB-500K.ext3:rw /scratch/$USER/ubuntu-20.04.3.sif /bin/bash -c "
+singularity exec --bind /scratch --nv --overlay  /scratch/$USER/overlay-25GB-500K.ext3:rw /scratch/$USER/ubuntu-20.04.3.sif /bin/bash -c " conda activate nlp_env; cd /scratch/$USER/; python test_gpu.py; "
 
 ```
 
