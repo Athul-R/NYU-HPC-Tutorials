@@ -29,6 +29,14 @@ To access the HPC Burst Nodes, you need to be on the NYU network. If you're off-
 Go to the [OOD URL](https://ood-burst-001.hpc.nyu.edu/) and login with your NYU credentials. You will be redirected to the NYU SSO page. Login with your NYU credentials. You will be redirected to the OOD page. You will see a page with a list of applications.
 ![Login Page](./Front%20Page.png)
 
+
+## Major Login Issues. 
+If you are unable to login, try the following:
+1. Clear your browser cookies and cache.
+2. Turn on the VPN.
+3. If you are using a Mac, try using Safari instead of Chrome.
+
+
 ## Launching a Jupyter Notebook/Lab.
 
 Click on the "Jupyter Notebook" application on the [landing page](#login) You will be redirected to a page where you can configure the JupyterLab environment. 
