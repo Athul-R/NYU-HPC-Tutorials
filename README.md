@@ -1,7 +1,6 @@
 # HPC Tutorial
 This is a tutorial on how to use the HPC cluster. For this course, we will be using the burst node. All students are provided with an account on the HPC cluster with access to the burst node. Burst nodes are nodes that are not part of the regular cluster and are used for short-term, high-performance computing tasks. They are preemptible VMs on GCP.
 
-
 ## Burst Node
 Burst node access is provided exclusively via Open OnDemand a.k.a. OOD. You can access it at [https://ood-burst-001.hpc.nyu.edu/](https://ood-burst-001.hpc.nyu.edu/). 
 
@@ -19,6 +18,12 @@ Only through this OOD server, you can:
 Make sure you clear the cookies and cache of your browser related to ood or hpc. You can do this by going to [chrome://settings/content/all?searchSubpage=ood.torch.hpc.nyu.edu&search](chrome://settings/content/all?searchSubpage=ood.torch.hpc.nyu.edu&search)
 
 ![Clear Cookies](https://services.rt.nyu.edu/assets/images/ood_remove_cache-a10302cdb6318e2426dd56be05ac485f.png)
+
+### Turn on the VPN.
+
+To access the HPC Burst Nodes, you need to be on the NYU network. If you're off-campus, connect via the [NYU VPN](https://www.nyu.edu/life/information-technology/infrastructure/network-services/vpn.html).
+
+
 
 ## Login
 Go to the [OOD URL](https://ood-burst-001.hpc.nyu.edu/) and login with your NYU credentials. You will be redirected to the NYU SSO page. Login with your NYU credentials. You will be redirected to the OOD page. You will see a page with a list of applications.
